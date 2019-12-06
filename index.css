@@ -1,0 +1,82 @@
+/* The CSS in this task has been an uphill struggle and I've done a lot of hacking
+to make it work, so it might not be the best */
+#container {
+  width: 80%;
+  background-color: inherit;
+  font-family: sans-serif, Verdana, Geneva, Tahoma;
+  margin: 0 auto;
+  padding: 0% 1% 1% 1%;
+}
+
+.title {
+  font-weight: bolder;
+  color: black;
+  font-size: 0.9rem;
+  margin: 3% 0% 4% 0%;
+  /* I'll admit this is one of my luckiest Google findings */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+.link {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitle {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.container>header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.container>main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  justify-items: center;
+  justify-content: space-evenly;
+}
+
+.article>a {
+  text-decoration: none;
+}
+
+.link>* {
+  width: 100%;
+}
+
+.subtitle>* {
+  font-weight: bold;
+  font-size: 0.6rem;
+  color: lightslategray;
+}
+
+header>p {
+  font-weight: bolder;
+  font-size: 0.9rem;
+}
+
+header>a {
+  font-size: 0.7rem;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .container>main {
+    grid-template-columns: 1fr;
+  }
+}
